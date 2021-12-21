@@ -20,7 +20,18 @@ namespace demoQuanLyThuVien
         }
         public void hienthi()
         {
-           
+            listView1.View = View.Details;
+            listView1.GridLines = true;
+            listView1.FullRowSelect = true;
+            listView1.Items.Clear();
+            listView1.Columns.Clear();
+            listView1.Columns.Add("Mã tác giả", 100);
+            listView1.Columns.Add("Tên tác giả", 200);
+            foreach(TacGia tg  in db.TacGia.ToList())
+            {
+                ListViewItem lv = listView1.Items.Add(tg.matg);
+                lv.SubItems.Add(tg.tentg);
+			}
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
