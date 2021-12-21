@@ -19,12 +19,14 @@ namespace demoQuanLyThuVien
 
         private void btnttSach_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
+            frmSach sach = new frmSach();
+            sach.ShowDialog();
         }
 
         private void btntacgia_Click(object sender, EventArgs e)
         {
-            
+           
         }
 
         private void btnLoaiSach_Click(object sender, EventArgs e)
