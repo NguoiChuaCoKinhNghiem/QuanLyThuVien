@@ -27,6 +27,9 @@ namespace demoQuanLyThuVien
         private void btntacgia_Click(object sender, EventArgs e)
         {
            
+			this.Hide();
+            frmTacGia tg = new frmTacGia();
+            tg.ShowDialog();
         }
 
         private void btnLoaiSach_Click(object sender, EventArgs e)
