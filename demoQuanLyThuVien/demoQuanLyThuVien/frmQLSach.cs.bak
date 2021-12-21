@@ -19,12 +19,16 @@ namespace demoQuanLyThuVien
 
         private void btnttSach_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
+            frmSach sach = new frmSach();
+            sach.ShowDialog();
         }
 
         private void btntacgia_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
+            frmTacGia tg = new frmTacGia();
+            tg.ShowDialog();
         }
 
         private void btnLoaiSach_Click(object sender, EventArgs e)
@@ -43,7 +47,9 @@ namespace demoQuanLyThuVien
 
         private void btnDauSach_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
+            frmDauSach ds = new frmDauSach();
+            ds.ShowDialog();
         }
 
         private void btnTroVe_Click(object sender, EventArgs e)
