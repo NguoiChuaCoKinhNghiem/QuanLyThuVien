@@ -18,11 +18,7 @@ namespace demoQuanLyThuVien
             txtPassword.Text = "";
             txtPassword.PasswordChar = '*';
         }
-        //public void thongtin()
-        //{
-        //    String user = "ngothuythuong.dacn";
-
-        //}
+        
         String user = "ngothuythuong.dacn";
         String pass = "123456789";
 
