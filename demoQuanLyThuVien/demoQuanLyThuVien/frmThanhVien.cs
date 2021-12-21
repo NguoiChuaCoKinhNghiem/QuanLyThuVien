@@ -117,7 +117,15 @@ namespace demoQuanLyThuVien
         private void btnSua_Click(object sender, EventArgs e)
         {
            
-            
+             ThanhVien tv;
+            foreach(ListViewItem li in lvThanhVien.SelectedItems)
+            {
+                tv = db.ThanhVien.Find(li.SubItems[0].Text);
+                frmChiTietThanhVien thanhVien = new frmChiTietThanhVien(tv);
+                this.Hide();
+                thanhVien.ShowDialog();
+
+            }
 
         }
 
