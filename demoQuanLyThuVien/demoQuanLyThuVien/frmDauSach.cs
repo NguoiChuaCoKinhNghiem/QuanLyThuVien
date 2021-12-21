@@ -73,6 +73,20 @@ namespace demoQuanLyThuVien
         private void btnHoantat_Click(object sender, EventArgs e)
         {
 
+ DauSach ds = db.DauSach.Find(txtTimKiem.Text);
+            if (ds != null)
+            {
+                MessageBox.Show("Không thể thêm mới Đầu sách!!!!!!");
+            }
+            else
+            {
+                ds = new DauSach();
+                ds.mads = txtTimKiem.Text;
+                ds.tends = txtTenDS.Text;
+                db.DauSach.Add(ds);
+                db.SaveChanges();
+                hienthi();
+            }
         }
 
         private void btnThem_Click(object sender, EventArgs e)
