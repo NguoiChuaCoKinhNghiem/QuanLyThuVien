@@ -60,7 +60,7 @@ namespace demoQuanLyThuVien
 
         private void frmSach_Load(object sender, EventArgs e)
         {
-           
+            hienthi();
         }
         
 
