@@ -25,18 +25,7 @@ namespace demoQuanLyThuVien
         }
         public void hienthi()
         {
-            listView1.View = View.Details;
-            listView1.GridLines = true;
-            listView1.FullRowSelect = true;
-            listView1.Items.Clear();
-            listView1.Columns.Clear();
-            listView1.Columns.Add("Mã đầu sách", 120);
-            listView1.Columns.Add("Tên đầu sách", 200);
-            foreach(DauSach ds in db.DauSach.ToList())
-            {
-                ListViewItem li = listView1.Items.Add(ds.mads);
-                li.SubItems.Add(ds.tends);
-            }
+            
         }
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -77,20 +66,7 @@ namespace demoQuanLyThuVien
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            DauSach ds = db.DauSach.Find(txtTimKiem.Text);
-            if (ds != null)
-            {
-                MessageBox.Show("Không thể thêm mới Đầu sách!!!!!!");
-            }
-            else
-            {
-                ds = new DauSach();
-                ds.mads = txtTimKiem.Text;
-                ds.tends = txtTenDS.Text;
-                db.DauSach.Add(ds);
-                db.SaveChanges();
-                hienthi();
-            }
+           
             
 
         }
@@ -109,23 +85,7 @@ namespace demoQuanLyThuVien
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            bool kq = false;
-            foreach(ListViewItem li in listView1.SelectedItems)
-            {
-                kq = true;
-                DauSach ds = db.DauSach.Find(li.SubItems[0].Text);
-                if (ds != null)
-                {
-                    if (ds.Sach.Count == 0)
-                        db.DauSach.Remove(ds);
-                    else
-                        MessageBox.Show("Không thể xóa!!!!");
-                }
-                db.SaveChanges();
-            }
-            if (kq)
-                hienthi();
-        }
+            
 
         
     }
