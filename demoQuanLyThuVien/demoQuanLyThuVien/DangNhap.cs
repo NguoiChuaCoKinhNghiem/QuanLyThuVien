@@ -33,7 +33,7 @@ namespace demoQuanLyThuVien
                     tc.ShowDialog();
                 }
                 else
-                    MessageBox.Show("Mật khẩu không đúng!!!");
+                    MessageBox.Show("Mật khẩu không đúng, hãy nhập lại mật khẩu!!!");
             }
             else
             {
