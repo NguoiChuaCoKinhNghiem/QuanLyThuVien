@@ -79,7 +79,20 @@ namespace demoQuanLyThuVien
         private void btnThem_Click(object sender, EventArgs e)
         {
            
-            
+            TacGia tg = db.TacGia.Find(txtTimKiem.Text);
+            if (tg != null)
+            {
+                MessageBox.Show("Tác giả đã tồn tại, không thể thêm mới!");
+            }
+            else
+            {
+                tg = new TacGia();
+                tg.matg = txtTimKiem.Text;
+                tg.tentg = txtTenTG.Text;
+                db.TacGia.Add(tg);
+                db.SaveChanges();
+                hienthi();
+            }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
