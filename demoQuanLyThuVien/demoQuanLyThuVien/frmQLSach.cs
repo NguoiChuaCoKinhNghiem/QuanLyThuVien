@@ -48,7 +48,9 @@ namespace demoQuanLyThuVien
 
         private void btnDauSach_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
+            frmDauSach ds = new frmDauSach();
+            ds.ShowDialog();
         }
 
         private void btnTroVe_Click(object sender, EventArgs e)
