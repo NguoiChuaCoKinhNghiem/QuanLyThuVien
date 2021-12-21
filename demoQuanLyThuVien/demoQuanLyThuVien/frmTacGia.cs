@@ -58,7 +58,17 @@ namespace demoQuanLyThuVien
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            
+            TacGia tg = db.TacGia.Find(txtTimKiem.Text);
+            if (tg != null)
+            {
+                listView1.Items.Clear();
+                ListViewItem li = listView1.Items.Add(tg.matg);
+                li.SubItems.Add(tg.tentg);
+            }
+            else
+            {
+                MessageBox.Show("Không tìn thấy thông tin tác giả!!!!");
+            } 
         }
 
         private void btnHoantat_Click(object sender, EventArgs e)
